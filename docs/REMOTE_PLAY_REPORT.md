@@ -68,9 +68,8 @@
 - Um teste do servidor olhava um evento antigo do histórico; corrigido (o código estava certo).
 
 ## O que NÃO foi testado
-- **A injeção real no Windows**: o núcleo nativo (Rust) foi escrito mas **não compilado** — não há
-  Rust/Cargo neste ambiente. Pode haver erros de compilação a corrigir (especialmente nas assinaturas
-  da crate `windows` 0.58). Nada do controle real foi verificado; precisa de teste em dois PCs.
+- **A injeção real no Windows**: o núcleo nativo (Rust) **compila** (instalador gerado pelo GitHub
+  Actions em 30/10/2026), mas o controle real ainda não foi verificado; precisa de teste em dois PCs.
 - Mouse relativo (jogos de tiro com a câmera presa ao mouse): esta versão envia posição absoluta, que
   serve para jogos de estratégia/menus/plataforma, mas não para "mouse look". Exige pointer lock e
   movimento relativo — próximo passo.

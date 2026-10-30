@@ -41,7 +41,7 @@ Em ordem:
 
 ### App para Windows
 - Comando nativo `notify` (plugin oficial de notificações do Tauri), só com título e corpo limitados;
-  o WebView não ganha acesso ao plugin em si. **Escrito, não compilado** (sem Rust neste ambiente).
+  o WebView não ganha acesso ao plugin em si. **Compila** (instalador gerado pelo GitHub Actions em 30/10/2026); ainda não testado em uso.
   Limitação conhecida: clicar no aviso nativo ainda não abre a conversa.
 
 ## Testes
@@ -67,7 +67,7 @@ Em ordem:
   desenvolvimento com recarga a quente); a versão final foi conferida depois de recarregar.
 
 ## Limites
-- Aviso nativo do Windows não compilado nem testado; o clique nele não leva à conversa.
+- Aviso nativo do Windows compila, mas não foi testado em uso; o clique nele não leva à conversa.
 - Sem "@everyone/@here" (a permissão existe, o recurso ainda não).
 - A contagem de menções no início vem das 25 mais recentes; menções mais antigas não lidas não entram
   no número (aparecem ao rolar a caixa de entrada).

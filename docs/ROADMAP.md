@@ -11,9 +11,9 @@
 | 5 — Transmissão | captura de tela/janela/aba, qualidade escolhida (360p–2160p, 15/30/60 FPS), adaptação por espectador, estatísticas reais, permissão STREAM | **implementada** — vídeo só para quem assiste (P2P, até 7 espectadores); seletor real do sistema e WebView2 ainda não testados (ver `docs/STAGE5_REPORT.md`). Simulcast/SFU ficam para quando houver SFU. |
 | 5b — Câmera (VYRON 8.4) | câmera em canais de voz e chamadas, 360p/720p, permissão VIDEO, prévia e teste | **implementada** — câmera física não testada neste ambiente (ver `docs/CAMERA_REPORT.md`) |
 | 5c — Arquivos (VYRON 5.2/6.3) | anexos em mensagens, avatar e banner, detecção de tipo pelo conteúdo, remoção de metadados, download com permissão | **implementada** (ver `docs/FILES_REPORT.md`); sem antivírus no servidor |
-| 5d — Notificações (VYRON 12) | avisos do sistema e sons, regras por categoria/servidor, silenciar com prazo, "Não perturbe", caixa de menções, contagem no título | **implementada** (ver `docs/NOTIFICATIONS_REPORT.md`); aviso nativo do Windows escrito, não compilado |
+| 5d — Notificações (VYRON 12) | avisos do sistema e sons, regras por categoria/servidor, silenciar com prazo, "Não perturbe", caixa de menções, contagem no título | **implementada** (ver `docs/NOTIFICATIONS_REPORT.md`); aviso nativo do Windows compila, não testado em uso |
 | Distribuição | app escolhe o servidor na entrada (só HTTPS), CSP do app corrigida, ícones, servidor em Docker (Postgres, Caddy/HTTPS, coturn), backups, instalador Windows via GitHub Actions | **pronta para usar** (ver `docs/DEPLOY.md`); Docker e o build do instalador ainda não executados de verdade |
-| 6 — Jogar Juntos | pedido e aprovação, permissões por tipo de entrada, prazo, revogação imediata, guarda de entradas | **parcial** — fluxo completo testado no navegador (entradas só exibidas); injeção nativa no Windows escrita mas **não compilada nem testada**; sem gamepad e sem mouse relativo (ver `docs/REMOTE_PLAY_REPORT.md`) |
+| 6 — Jogar Juntos | pedido e aprovação, permissões por tipo de entrada, prazo, revogação imediata, guarda de entradas | **parcial** — fluxo completo testado no navegador (entradas só exibidas); injeção nativa no Windows **compila, mas não foi testada em uso**; sem gamepad e sem mouse relativo (ver `docs/REMOTE_PLAY_REPORT.md`) |
 | 7 — Acabamento | notificações, bandeja, atualizador assinado, instalador, acessibilidade, testes em 2 PCs | pendente |
 
 ## Principais riscos técnicos
@@ -34,6 +34,7 @@
 
 ## Limitações conhecidas deste ambiente
 
-- Sem Rust/Cargo: o shell Tauri foi escrito mas **não compilado** aqui. Instale Rust para gerar o `.exe`.
+- Sem Rust/Cargo nesta máquina: o app para Windows é compilado pelo GitHub Actions ("Instalador Windows").
+  Primeiro build bem-sucedido em 30/10/2026; uso real (bandeja, avisos nativos, Jogar Juntos) ainda a testar.
 - Sem PostgreSQL/Docker: todos os testes rodaram contra PGlite (Postgres 17 em WASM).
   `docker-compose.yml` está pronto para Postgres real.

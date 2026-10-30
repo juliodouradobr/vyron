@@ -163,6 +163,6 @@ As migrações de banco rodam sozinhas ao iniciar. Gere um instalador novo pelo 
   `deploy/docker-compose.yml`).
 - **Não testado ainda em produção real**: esta configuração (Docker, Caddy, coturn, Postgres) foi
   escrita e revisada, mas o ambiente onde foi preparada não tinha Docker. O servidor em si foi
-  verificado em modo de produção (HTTPS fica a cargo do Caddy). O instalador nunca foi compilado aqui
-  (sem Rust): o primeiro build no GitHub é o primeiro teste do núcleo nativo.
+  verificado em modo de produção (HTTPS fica a cargo do Caddy). O instalador é gerado pelo GitHub
+  Actions (primeiro build bem-sucedido em 30/10/2026); o uso real do app instalado ainda está sendo testado.
 - O app só aceita servidores com **HTTPS** (exceto `localhost`, para desenvolvimento).

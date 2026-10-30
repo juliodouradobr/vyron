@@ -7,7 +7,7 @@ VYRON o substitui. Nada foi descartado: esta auditoria mapeia o que existe para 
 
 | Camada | Tecnologia | Observação |
 |---|---|---|
-| Desktop | Tauri 2 (Rust) + React 18 + TypeScript + Vite 7 + Zustand | Shell Rust **escrito mas nunca compilado** (sem Rust nesta máquina). |
+| Desktop | Tauri 2 (Rust) + React 18 + TypeScript + Vite 7 + Zustand | Shell Rust **compila** (instalador gerado pelo GitHub Actions em 30/10/2026); uso real no Windows ainda a testar. |
 | Backend | Node.js + TypeScript + Fastify 5 + WebSocket | Processo único, modular por domínio. |
 | Banco | PostgreSQL (produção) / PGlite (dev e testes) | 2 migrações versionadas. |
 | Mídia | WebRTC P2P em malha (até 8), Opus, RNNoise local em AudioWorklet | Sem SFU, sem TURN configurado. |
@@ -36,10 +36,10 @@ WebSocket real). Bancada de ruído com regressão. Verificações manuais no nav
 | 8.4 Vídeo (câmera) | ✅ implementado | Botão na chamada, 360p/720p, permissão própria VIDEO (verificada e revalidada no servidor), escolha de câmera só no computador, prévia espelhada opcional, teste nas configurações. Testado com WebRTC real e duas contas; câmera física ainda a conferir num PC (ver `docs/CAMERA_REPORT.md`). |
 | 8.5 SFU | ❌ ausente | P2P até 8; limitação documentada. |
 | 9.1–9.2 Compartilhamento de tela | ✅ implementado | Tela/janela/aba via seletor oficial, 360p–2160p × 15/30/60 FPS, escolhido × real com motivos, adaptação por espectador, permissão STREAM no servidor, vídeo só para quem assiste. Testado com WebRTC real e duas contas; seletor real do sistema e WebView2 ainda a conferir num PC. |
-| 9.4–9.5 Remote Play | 🟡 parcial | Autorização explícita no servidor (pedido, tipos de entrada, prazo, revogação, atalho de emergência), canal P2P de entradas, guarda que bloqueia atalhos do sistema. Testado com duas contas no navegador, onde as entradas só são exibidas. Injeção no Windows (Rust, só na janela escolhida e em primeiro plano) escrita mas não compilada. Falta gamepad e mouse relativo. Ver `docs/REMOTE_PLAY_REPORT.md`. |
+| 9.4–9.5 Remote Play | 🟡 parcial | Autorização explícita no servidor (pedido, tipos de entrada, prazo, revogação, atalho de emergência), canal P2P de entradas, guarda que bloqueia atalhos do sistema. Testado com duas contas no navegador, onde as entradas só são exibidas. Injeção no Windows (Rust, só na janela escolhida e em primeiro plano) compila, mas não foi testada em uso. Falta gamepad e mouse relativo. Ver `docs/REMOTE_PLAY_REPORT.md`. |
 | 10 Recursos gamer | ❌ ausente | Atividade, eventos, torneios. |
 | 11 Soundboard | ❌ ausente | |
-| 12 Notificações | ✅ implementado | Avisos do sistema (navegador; nativo no app para Windows — não compilado), sons, regras por categoria, padrão e ajuste por servidor, silenciar canal/servidor com prazo, "Não perturbe", caixa de entrada de menções (com checagem de acesso), contagem de menções e título "(N) VYRON". Ver `docs/NOTIFICATIONS_REPORT.md`. |
+| 12 Notificações | ✅ implementado | Avisos do sistema (navegador; nativo no app para Windows — compila, não testado em uso), sons, regras por categoria, padrão e ajuste por servidor, silenciar canal/servidor com prazo, "Não perturbe", caixa de entrada de menções (com checagem de acesso), contagem de menções e título "(N) VYRON". Ver `docs/NOTIFICATIONS_REPORT.md`. |
 | 13 Site oficial | ❌ ausente | Não haverá links de download até existir um instalador real. |
 | 14 Segurança | 🟡 sólido na base | Falta: notificações de segurança, retenção, CSP revisada para mídia. |
 | 18–20 Mobile | ❌ ausente | Fase posterior. |
