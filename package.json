@@ -1,0 +1,24 @@
+{
+  "name": "nexo",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Plataforma desktop de comunicação para gamers",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev:server": "npm run dev -w @nexo/server",
+    "dev:desktop": "npm run dev -w @nexo/desktop",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present",
+    "build:web": "npm run build -w @nexo/desktop"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3",
+    "vitest": "^3.2.4"
+  }
+}

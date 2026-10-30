@@ -1,0 +1,18 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "default",
+  "description": "Permissões mínimas da janela principal: núcleo do Tauri, o cofre de credenciais, o comportamento da bandeja e os 4 comandos do Jogar Juntos (que só agem após autorização e na janela escolhida). Nada de shell, fs ou process. O atalho global é registrado no Rust, sem permissão de atalhos para o WebView.",
+  "windows": ["main"],
+  "permissions": [
+    "core:default",
+    "allow-auth-token-get",
+    "allow-auth-token-set",
+    "allow-auth-token-clear",
+    "allow-set-close-to-tray",
+    "allow-notify",
+    "allow-play-list-windows",
+    "allow-play-arm",
+    "allow-play-input",
+    "allow-play-disarm"
+  ]
+}

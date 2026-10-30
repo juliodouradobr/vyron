@@ -1,0 +1,19 @@
+# HTTPS automático para o domínio do VYRON (certificado emitido e renovado pelo Caddy).
+{
+	email {$ACME_EMAIL}
+}
+
+{$DOMAIN} {
+	encode zstd gzip
+
+	# Cabeçalhos de segurança para tudo o que sai do servidor.
+	header {
+		Strict-Transport-Security "max-age=31536000; includeSubDomains"
+		X-Content-Type-Options nosniff
+		Referrer-Policy no-referrer
+		-Server
+	}
+
+	# API e gateway (WebSocket) — o Caddy repassa a atualização para WebSocket sozinho.
+	reverse_proxy server:4100
+}

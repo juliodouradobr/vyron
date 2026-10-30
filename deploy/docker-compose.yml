@@ -1,0 +1,101 @@
+# VYRON em produção: um servidor Linux com Docker roda tudo.
+#   - caddy:    HTTPS automático (certificado Let's Encrypt) e repasse para o servidor
+#   - server:   API + tempo real (não fica exposto direto na internet; só pelo caddy)
+#   - postgres: banco de dados (não fica exposto na internet)
+#   - coturn:   TURN para chamadas/transmissões atravessarem redes restritivas
+#
+# Uso (na pasta deploy/):  cp .env.example .env  →  preencha  →  docker compose up -d --build
+# Guia completo: docs/DEPLOY.md
+
+name: vyron
+
+services:
+  postgres:
+    image: postgres:17-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: vyron
+      POSTGRES_DB: vyron
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?defina POSTGRES_PASSWORD no .env}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U vyron -d vyron"]
+      interval: 5s
+      retries: 20
+
+  server:
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgres://vyron:${POSTGRES_PASSWORD}@postgres:5432/vyron
+      HOST: 0.0.0.0
+      PORT: "4100"
+      # Só o Caddy fala com o servidor: confiar no cabeçalho de IP dele é seguro aqui
+      # (necessário para os limites de tentativas por IP funcionarem atrás do proxy).
+      TRUST_PROXY: "true"
+      LOG_LEVEL: info
+      # Origens do app para Windows (Tauri). Nenhum site de terceiros é aceito.
+      CORS_ORIGINS: tauri://localhost,http://tauri.localhost,https://tauri.localhost
+      STUN_URLS: stun:${DOMAIN}:3478
+      TURN_URLS: turn:${DOMAIN}:3478?transport=udp,turn:${DOMAIN}:3478?transport=tcp
+      TURN_SECRET: ${TURN_SECRET:?defina TURN_SECRET no .env}
+      FILES_DIR: /data/files
+    volumes:
+      - files:/data/files
+    expose:
+      - "4100"
+
+  caddy:
+    image: caddy:2-alpine
+    restart: unless-stopped
+    depends_on:
+      - server
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"
+    environment:
+      DOMAIN: ${DOMAIN:?defina DOMAIN no .env}
+      ACME_EMAIL: ${ACME_EMAIL:?defina ACME_EMAIL no .env}
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+
+  coturn:
+    image: coturn/coturn:4.6
+    restart: unless-stopped
+    # TURN precisa de uma faixa de portas UDP: em modo host evita mapear centenas de portas.
+    network_mode: host
+    command:
+      - -n
+      - --listening-port=3478
+      - --min-port=49160
+      - --max-port=49200
+      - --use-auth-secret
+      - --static-auth-secret=${TURN_SECRET}
+      - --realm=${DOMAIN}
+      - --fingerprint
+      - --no-cli
+      - --no-tlsv1
+      - --no-tlsv1_1
+      # Não deixa o TURN ser usado para alcançar a rede interna do servidor.
+      - --no-multicast-peers
+      - --denied-peer-ip=10.0.0.0-10.255.255.255
+      - --denied-peer-ip=172.16.0.0-172.31.255.255
+      - --denied-peer-ip=192.168.0.0-192.168.255.255
+      - --denied-peer-ip=127.0.0.0-127.255.255.255
+      - --denied-peer-ip=169.254.0.0-169.254.255.255
+      - --log-file=stdout
+
+volumes:
+  pgdata:
+  files:
+  caddy_data:
+  caddy_config:

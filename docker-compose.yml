@@ -1,0 +1,19 @@
+# PostgreSQL para desenvolvimento com banco real.
+# Uso: docker compose up -d  e  DATABASE_URL=postgres://nexo:${POSTGRES_PASSWORD}@localhost:5432/nexo
+services:
+  postgres:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_USER: nexo
+      POSTGRES_DB: nexo
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?defina POSTGRES_PASSWORD no ambiente}
+    ports:
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U nexo"]
+      interval: 5s
+      retries: 10
+volumes:
+  pgdata:

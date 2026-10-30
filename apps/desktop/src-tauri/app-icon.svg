@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 32 32">
+  <!-- Ícone do VYRON: o "V" em chevron dentro do hexágono, sobre fundo escuro arredondado. -->
+  <rect x="0" y="0" width="32" height="32" rx="7" fill="#0d1117"/>
+  <path d="M16 3.5l10.8 6.25v12.5L16 28.5 5.2 22.25V9.75z" fill="none" stroke="#e6edf3" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M10 11l6 11 6-11" fill="none" stroke="#2ee6c5" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

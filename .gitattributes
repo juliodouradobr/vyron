@@ -1,0 +1,15 @@
+# Texto com quebra de linha normalizada no repositório.
+* text=auto
+
+# Arquivos que rodam no servidor Linux precisam de LF, mesmo editados no Windows.
+*.sh       text eol=lf
+Dockerfile text eol=lf
+Caddyfile  text eol=lf
+*.yml      text eol=lf
+*.sql      text eol=lf
+
+# Binários.
+*.png  binary
+*.ico  binary
+*.icns binary
+*.wasm binary

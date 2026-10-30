@@ -1,0 +1,18 @@
+node_modules/
+dist/
+target/
+.env
+deploy/.env
+deploy/backups/
+*.log
+apps/server/.data/
+apps/desktop/src-tauri/gen/
+coverage/
+# Configurações locais de ferramentas (podem conter permissões/caminhos desta máquina).
+.claude/
+.vscode/
+.idea/
+# Lixo do sistema.
+Thumbs.db
+desktop.ini
+.DS_Store

@@ -1,0 +1,174 @@
+/*
+ * Design tokens do VYRON. Toda cor, espaço, raio, sombra e duração vem daqui.
+ * Identidade própria: grafite azulado com acento ciano-esverdeado ("sinal") e coral para alertas.
+ */
+:root {
+  /* Espaçamento — escala de 4px */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+
+  /* Tipografia — fontes do sistema: nada para baixar, renderização nativa no Windows */
+  --font-sans: 'Segoe UI Variable Text', 'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif;
+  --font-display: 'Segoe UI Variable Display', 'Segoe UI', system-ui, sans-serif;
+  --font-mono: 'Cascadia Code', Consolas, 'SFMono-Regular', monospace;
+  --text-xs: 0.75rem;
+  --text-sm: 0.8125rem;
+  --text-md: 0.9375rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.5rem;
+  --text-2xl: 2rem;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+  --leading-tight: 1.25;
+  --leading-normal: 1.45;
+
+  /* Raios */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+  --radius-full: 999px;
+
+  /* Bordas */
+  --border-width: 1px;
+
+  /* Movimento */
+  --duration-fast: 120ms;
+  --duration-base: 180ms;
+  --duration-slow: 260ms;
+  --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* Layout */
+  --rail-width: 72px;
+  --sidebar-width: 248px;
+  --members-width: 248px;
+  --header-height: 52px;
+  --ui-scale: 1;
+  --row-gap: var(--space-2);
+
+  /* Camadas */
+  --z-popover: 40;
+  --z-modal: 50;
+  --z-toast: 60;
+}
+
+/* ---------- Tema escuro (padrão) ---------- */
+:root,
+[data-theme='dark'] {
+  --bg-rail: #0b0d11;
+  --bg-sidebar: #12151b;
+  --bg-main: #181c23;
+  --bg-elevated: #20252e;
+  --bg-input: #0f1217;
+  --bg-hover: rgb(255 255 255 / 0.05);
+  --bg-active: rgb(255 255 255 / 0.09);
+  --bg-overlay: rgb(4 6 9 / 0.72);
+
+  --text-primary: #eef1f6;
+  --text-secondary: #b3bac7;
+  --text-muted: #7f8898;
+  --text-on-accent: #04201d;
+
+  --border-subtle: rgb(255 255 255 / 0.06);
+  --border-strong: rgb(255 255 255 / 0.14);
+
+  --accent: #2ee6c5;
+  --accent-hover: #5cf0d5;
+  --accent-soft: rgb(46 230 197 / 0.14);
+  --accent-2: #8b7bff;
+
+  --success: #3ddc84;
+  --warning: #ffb547;
+  --danger: #ff5e6c;
+  --danger-soft: rgb(255 94 108 / 0.14);
+  --info: #5aa9ff;
+
+  --status-online: #3ddc84;
+  --status-idle: #ffb547;
+  --status-dnd: #ff5e6c;
+  --status-offline: #6b7383;
+
+  --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.35);
+  --shadow-md: 0 8px 24px rgb(0 0 0 / 0.4);
+  --shadow-lg: 0 18px 48px rgb(0 0 0 / 0.55);
+  --focus-ring: 0 0 0 2px var(--bg-main), 0 0 0 4px var(--accent);
+  color-scheme: dark;
+}
+
+/* ---------- Tema claro ---------- */
+[data-theme='light'] {
+  --bg-rail: #dde2ea;
+  --bg-sidebar: #eef1f5;
+  --bg-main: #ffffff;
+  --bg-elevated: #ffffff;
+  --bg-input: #e8ecf1;
+  --bg-hover: rgb(15 23 42 / 0.05);
+  --bg-active: rgb(15 23 42 / 0.09);
+  --bg-overlay: rgb(15 23 42 / 0.45);
+
+  --text-primary: #111722;
+  --text-secondary: #3d4656;
+  --text-muted: #657082;
+  --text-on-accent: #ffffff;
+
+  --border-subtle: rgb(15 23 42 / 0.08);
+  --border-strong: rgb(15 23 42 / 0.18);
+
+  --accent: #0b8f7a;
+  --accent-hover: #087563;
+  --accent-soft: rgb(11 143 122 / 0.12);
+  --accent-2: #5b4ce0;
+
+  --success: #138a4b;
+  --warning: #a65f00;
+  --danger: #d12f3f;
+  --danger-soft: rgb(209 47 63 / 0.1);
+  --info: #1f6fd1;
+
+  --status-online: #1f9d57;
+  --status-idle: #c77800;
+  --status-dnd: #d12f3f;
+  --status-offline: #8a93a3;
+
+  --shadow-sm: 0 1px 2px rgb(15 23 42 / 0.08);
+  --shadow-md: 0 8px 24px rgb(15 23 42 / 0.12);
+  --shadow-lg: 0 18px 48px rgb(15 23 42 / 0.18);
+  color-scheme: light;
+}
+
+/* ---------- Alto contraste ---------- */
+[data-contrast='high'] {
+  --text-secondary: var(--text-primary);
+  --text-muted: var(--text-secondary);
+  --border-subtle: var(--border-strong);
+}
+
+/* ---------- Densidade ---------- */
+[data-density='compact'] {
+  --row-gap: var(--space-1);
+  --header-height: 44px;
+}
+
+/* ---------- Movimento reduzido (preferência do app ou do sistema) ---------- */
+[data-motion='reduced'] {
+  --duration-fast: 0ms;
+  --duration-base: 0ms;
+  --duration-slow: 0ms;
+}
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-fast: 0ms;
+    --duration-base: 0ms;
+    --duration-slow: 0ms;
+  }
+}

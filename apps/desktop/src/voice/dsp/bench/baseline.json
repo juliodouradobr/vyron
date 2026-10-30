@@ -1,0 +1,722 @@
+[
+  {
+    "noise": "white",
+    "snrDb": 0,
+    "mode": "off",
+    "siSdrDelta": 0,
+    "noiseReductionDb": 0,
+    "wordCutPct": 0
+  },
+  {
+    "noise": "white",
+    "snrDb": 0,
+    "mode": "natural",
+    "siSdrDelta": 7.1,
+    "noiseReductionDb": 9.7,
+    "wordCutPct": 0
+  },
+  {
+    "noise": "white",
+    "snrDb": 0,
+    "mode": "light",
+    "siSdrDelta": 9.3,
+    "noiseReductionDb": 16.8,
+    "wordCutPct": 7.6
+  },
+  {
+    "noise": "white",
+    "snrDb": 0,
+    "mode": "balanced",
+    "siSdrDelta": 9.3,
+    "noiseReductionDb": 27.5,
+    "wordCutPct": 13.4
+  },
+  {
+    "noise": "white",
+    "snrDb": 0,
+    "mode": "strong",
+    "siSdrDelta": 9.1,
+    "noiseReductionDb": 28.6,
+    "wordCutPct": 15.1
+  },
+  {
+    "noise": "white",
+    "snrDb": 0,
+    "mode": "auto",
+    "siSdrDelta": 8.3,
+    "noiseReductionDb": 13.4,
+    "wordCutPct": 6.7
+  },
+  {
+    "noise": "white",
+    "snrDb": 10,
+    "mode": "off",
+    "siSdrDelta": 0,
+    "noiseReductionDb": 0,
+    "wordCutPct": 0
+  },
+  {
+    "noise": "white",
+    "snrDb": 10,
+    "mode": "natural",
+    "siSdrDelta": 2.8,
+    "noiseReductionDb": 9.4,
+    "wordCutPct": 0
+  },
+  {
+    "noise": "white",
+    "snrDb": 10,
+    "mode": "light",
+    "siSdrDelta": 1.7,
+    "noiseReductionDb": 16,
+    "wordCutPct": 6.1
+  },
+  {
+    "noise": "white",
+    "snrDb": 10,
+    "mode": "balanced",
+    "siSdrDelta": 0.7,
+    "noiseReductionDb": 24.5,
+    "wordCutPct": 8.7
+  },
+  {
+    "noise": "white",
+    "snrDb": 10,
+    "mode": "strong",
+    "siSdrDelta": 0.5,
+    "noiseReductionDb": 26.5,
+    "wordCutPct": 9
+  },
+  {
+    "noise": "white",
+    "snrDb": 10,
+    "mode": "auto",
+    "siSdrDelta": 1.7,
+    "noiseReductionDb": 16,
+    "wordCutPct": 6.1
+  },
+  {
+    "noise": "white",
+    "snrDb": 20,
+    "mode": "off",
+    "siSdrDelta": 0,
+    "noiseReductionDb": 0,
+    "wordCutPct": 0
+  },
+  {
+    "noise": "white",
+    "snrDb": 20,
+    "mode": "natural",
+    "siSdrDelta": -5.8,
+    "noiseReductionDb": 9,
+    "wordCutPct": 0
+  },
+  {
+    "noise": "white",
+    "snrDb": 20,
+    "mode": "light",
+    "siSdrDelta": -8,
+    "noiseReductionDb": 14.8,
+    "wordCutPct": 11.3
+  },
+  {
+    "noise": "white",
+    "snrDb": 20,
+    "mode": "balanced",
+    "siSdrDelta": -9.4,
+    "noiseReductionDb": 21.1,
+    "wordCutPct": 12.5
+  },
+  {
+    "noise": "white",
+    "snrDb": 20,
+    "mode": "strong",
+    "siSdrDelta": -9.5,
+    "noiseReductionDb": 23.6,
+    "wordCutPct": 12.8
+  },
+  {
+    "noise": "white",
+    "snrDb": 20,
+    "mode": "auto",
+    "siSdrDelta": -5.8,
+    "noiseReductionDb": 9,
+    "wordCutPct": 0
+  },
+  {
+    "noise": "pink",
+    "snrDb": 0,
+    "mode": "off",
+    "siSdrDelta": 0,
+    "noiseReductionDb": 0,
+    "wordCutPct": 0
+  },
+  {
+    "noise": "pink",
+    "snrDb": 0,
+    "mode": "natural",
+    "siSdrDelta": 5.2,
+    "noiseReductionDb": 9.5,
+    "wordCutPct": 0
+  },
+  {
+    "noise": "pink",
+    "snrDb": 0,
+    "mode": "light",
+    "siSdrDelta": 6.5,
+    "noiseReductionDb": 16.1,
+    "wordCutPct": 11.9
+  },
+  {
+    "noise": "pink",
+    "snrDb": 0,
+    "mode": "balanced",
+    "siSdrDelta": 6.3,
+    "noiseReductionDb": 24,
+    "wordCutPct": 21.8
+  },
+  {
+    "noise": "pink",
+    "snrDb": 0,
+    "mode": "strong",
+    "siSdrDelta": 5,
+    "noiseReductionDb": 24.2,
+    "wordCutPct": 38.7
+  },
+  {
+    "noise": "pink",
+    "snrDb": 0,
+    "mode": "auto",
+    "siSdrDelta": 5.9,
+    "noiseReductionDb": 13.4,
+    "wordCutPct": 9.3
+  },
+  {
+    "noise": "pink",
+    "snrDb": 10,
+    "mode": "off",
+    "siSdrDelta": 0,
+    "noiseReductionDb": 0,
+    "wordCutPct": 0
+  },
+  {
+    "noise": "pink",
+    "snrDb": 10,
+    "mode": "natural",
+    "siSdrDelta": 1.8,
+    "noiseReductionDb": 9.4,
+    "wordCutPct": 0
+  },
+  {
+    "noise": "pink",
+    "snrDb": 10,
+    "mode": "light",
+    "siSdrDelta": 0.7,
+    "noiseReductionDb": 15.9,
+    "wordCutPct": 10.2
+  },
+  {
+    "noise": "pink",
+    "snrDb": 10,
+    "mode": "balanced",
+    "siSdrDelta": -0.4,
+    "noiseReductionDb": 24.5,
+    "wordCutPct": 11.6
+  },
+  {
+    "noise": "pink",
+    "snrDb": 10,
+    "mode": "strong",
+    "siSdrDelta": -0.4,
+    "noiseReductionDb": 25.9,
+    "wordCutPct": 11.9
+  },
+  {
+    "noise": "pink",
+    "snrDb": 10,
+    "mode": "auto",
+    "siSdrDelta": 0.2,
+    "noiseReductionDb": 17.4,
+    "wordCutPct": 10.5
+  },
+  {
+    "noise": "pink",
+    "snrDb": 20,
+    "mode": "off",
+    "siSdrDelta": 0,
+    "noiseReductionDb": 0,
+    "wordCutPct": 0
+  },
+  {
+    "noise": "pink",
+    "snrDb": 20,
+    "mode": "natural",
+    "siSdrDelta": -6.3,
+    "noiseReductionDb": 9.2,
+    "wordCutPct": 0
+  },
+  {
+    "noise": "pink",
+    "snrDb": 20,
+    "mode": "light",
+    "siSdrDelta": -8.4,
+    "noiseReductionDb": 15.4,
+    "wordCutPct": 13.1
+  },
+  {
+    "noise": "pink",
+    "snrDb": 20,
+    "mode": "balanced",
+    "siSdrDelta": -9.7,
+    "noiseReductionDb": 22.8,
+    "wordCutPct": 13.7
+  },
+  {
+    "noise": "pink",
+    "snrDb": 20,
+    "mode": "strong",
+    "siSdrDelta": -9.7,
+    "noiseReductionDb": 25.6,
+    "wordCutPct": 13.7
+  },
+  {
+    "noise": "pink",
+    "snrDb": 20,
+    "mode": "auto",
+    "siSdrDelta": -7.5,
+    "noiseReductionDb": 10.9,
+    "wordCutPct": 6.7
+  },
+  {
+    "noise": "fan",
+    "snrDb": 0,
+    "mode": "off",
+    "siSdrDelta": 0,
+    "noiseReductionDb": 0,
+    "wordCutPct": 0
+  },
+  {
+    "noise": "fan",
+    "snrDb": 0,
+    "mode": "natural",
+    "siSdrDelta": 2.3,
+    "noiseReductionDb": 6.2,
+    "wordCutPct": 0
+  },
+  {
+    "noise": "fan",
+    "snrDb": 0,
+    "mode": "light",
+    "siSdrDelta": 2.6,
+    "noiseReductionDb": 8.8,
+    "wordCutPct": 6.1
+  },
+  {
+    "noise": "fan",
+    "snrDb": 0,
+    "mode": "balanced",
+    "siSdrDelta": 2.6,
+    "noiseReductionDb": 10.6,
+    "wordCutPct": 11
+  },
+  {
+    "noise": "fan",
+    "snrDb": 0,
+    "mode": "strong",
+    "siSdrDelta": 2.6,
+    "noiseReductionDb": 10.6,
+    "wordCutPct": 11
+  },
+  {
+    "noise": "fan",
+    "snrDb": 0,
+    "mode": "auto",
+    "siSdrDelta": 2.6,
+    "noiseReductionDb": 10.6,
+    "wordCutPct": 11
+  },
+  {
+    "noise": "fan",
+    "snrDb": 10,
+    "mode": "off",
+    "siSdrDelta": 0,
+    "noiseReductionDb": 0,
+    "wordCutPct": 0
+  },
+  {
+    "noise": "fan",
+    "snrDb": 10,
+    "mode": "natural",
+    "siSdrDelta": 0.3,
+    "noiseReductionDb": 7.6,
+    "wordCutPct": 0
+  },
+  {
+    "noise": "fan",
+    "snrDb": 10,
+    "mode": "light",
+    "siSdrDelta": -0.7,
+    "noiseReductionDb": 11.4,
+    "wordCutPct": 12.5
+  },
+  {
+    "noise": "fan",
+    "snrDb": 10,
+    "mode": "balanced",
+    "siSdrDelta": -1.4,
+    "noiseReductionDb": 14.2,
+    "wordCutPct": 13.4
+  },
+  {
+    "noise": "fan",
+    "snrDb": 10,
+    "mode": "strong",
+    "siSdrDelta": -1.5,
+    "noiseReductionDb": 14.5,
+    "wordCutPct": 13.4
+  },
+  {
+    "noise": "fan",
+    "snrDb": 10,
+    "mode": "auto",
+    "siSdrDelta": -1.4,
+    "noiseReductionDb": 14.2,
+    "wordCutPct": 13.4
+  },
+  {
+    "noise": "fan",
+    "snrDb": 20,
+    "mode": "off",
+    "siSdrDelta": 0,
+    "noiseReductionDb": 0,
+    "wordCutPct": 0
+  },
+  {
+    "noise": "fan",
+    "snrDb": 20,
+    "mode": "natural",
+    "siSdrDelta": -6.4,
+    "noiseReductionDb": 8.4,
+    "wordCutPct": 0
+  },
+  {
+    "noise": "fan",
+    "snrDb": 20,
+    "mode": "light",
+    "siSdrDelta": -8.5,
+    "noiseReductionDb": 13.3,
+    "wordCutPct": 12.5
+  },
+  {
+    "noise": "fan",
+    "snrDb": 20,
+    "mode": "balanced",
+    "siSdrDelta": -9.8,
+    "noiseReductionDb": 18.1,
+    "wordCutPct": 13.4
+  },
+  {
+    "noise": "fan",
+    "snrDb": 20,
+    "mode": "strong",
+    "siSdrDelta": -9.8,
+    "noiseReductionDb": 19,
+    "wordCutPct": 13.4
+  },
+  {
+    "noise": "fan",
+    "snrDb": 20,
+    "mode": "auto",
+    "siSdrDelta": -7.6,
+    "noiseReductionDb": 9.8,
+    "wordCutPct": 6.1
+  },
+  {
+    "noise": "keyboard",
+    "snrDb": 0,
+    "mode": "off",
+    "siSdrDelta": 0,
+    "noiseReductionDb": 0,
+    "wordCutPct": 0
+  },
+  {
+    "noise": "keyboard",
+    "snrDb": 0,
+    "mode": "natural",
+    "siSdrDelta": 3.6,
+    "noiseReductionDb": 5.1,
+    "wordCutPct": 0
+  },
+  {
+    "noise": "keyboard",
+    "snrDb": 0,
+    "mode": "light",
+    "siSdrDelta": 4.4,
+    "noiseReductionDb": 6.8,
+    "wordCutPct": 1.7
+  },
+  {
+    "noise": "keyboard",
+    "snrDb": 0,
+    "mode": "balanced",
+    "siSdrDelta": 4.8,
+    "noiseReductionDb": 7.8,
+    "wordCutPct": 3.5
+  },
+  {
+    "noise": "keyboard",
+    "snrDb": 0,
+    "mode": "strong",
+    "siSdrDelta": 5,
+    "noiseReductionDb": 8.6,
+    "wordCutPct": 4.4
+  },
+  {
+    "noise": "keyboard",
+    "snrDb": 0,
+    "mode": "auto",
+    "siSdrDelta": 4.2,
+    "noiseReductionDb": 6.4,
+    "wordCutPct": 0.9
+  },
+  {
+    "noise": "keyboard",
+    "snrDb": 10,
+    "mode": "off",
+    "siSdrDelta": 0,
+    "noiseReductionDb": 0,
+    "wordCutPct": 0
+  },
+  {
+    "noise": "keyboard",
+    "snrDb": 10,
+    "mode": "natural",
+    "siSdrDelta": 1.3,
+    "noiseReductionDb": 4.5,
+    "wordCutPct": 0
+  },
+  {
+    "noise": "keyboard",
+    "snrDb": 10,
+    "mode": "light",
+    "siSdrDelta": 0.7,
+    "noiseReductionDb": 5.8,
+    "wordCutPct": 6.1
+  },
+  {
+    "noise": "keyboard",
+    "snrDb": 10,
+    "mode": "balanced",
+    "siSdrDelta": 0.2,
+    "noiseReductionDb": 6.6,
+    "wordCutPct": 7
+  },
+  {
+    "noise": "keyboard",
+    "snrDb": 10,
+    "mode": "strong",
+    "siSdrDelta": 0.2,
+    "noiseReductionDb": 7.6,
+    "wordCutPct": 7.6
+  },
+  {
+    "noise": "keyboard",
+    "snrDb": 10,
+    "mode": "auto",
+    "siSdrDelta": 1.1,
+    "noiseReductionDb": 5.1,
+    "wordCutPct": 2
+  },
+  {
+    "noise": "keyboard",
+    "snrDb": 20,
+    "mode": "off",
+    "siSdrDelta": 0,
+    "noiseReductionDb": 0,
+    "wordCutPct": 0
+  },
+  {
+    "noise": "keyboard",
+    "snrDb": 20,
+    "mode": "natural",
+    "siSdrDelta": -5.2,
+    "noiseReductionDb": 5.2,
+    "wordCutPct": 0
+  },
+  {
+    "noise": "keyboard",
+    "snrDb": 20,
+    "mode": "light",
+    "siSdrDelta": -7.3,
+    "noiseReductionDb": 6.9,
+    "wordCutPct": 4.1
+  },
+  {
+    "noise": "keyboard",
+    "snrDb": 20,
+    "mode": "balanced",
+    "siSdrDelta": -8.5,
+    "noiseReductionDb": 7.9,
+    "wordCutPct": 6.7
+  },
+  {
+    "noise": "keyboard",
+    "snrDb": 20,
+    "mode": "strong",
+    "siSdrDelta": -8.5,
+    "noiseReductionDb": 8.7,
+    "wordCutPct": 6.7
+  },
+  {
+    "noise": "keyboard",
+    "snrDb": 20,
+    "mode": "auto",
+    "siSdrDelta": -6,
+    "noiseReductionDb": 5.4,
+    "wordCutPct": 3.2
+  },
+  {
+    "noise": "babble",
+    "snrDb": 0,
+    "mode": "off",
+    "siSdrDelta": 0,
+    "noiseReductionDb": 0,
+    "wordCutPct": 0
+  },
+  {
+    "noise": "babble",
+    "snrDb": 0,
+    "mode": "natural",
+    "siSdrDelta": -0.1,
+    "noiseReductionDb": 1.2,
+    "wordCutPct": 0
+  },
+  {
+    "noise": "babble",
+    "snrDb": 0,
+    "mode": "light",
+    "siSdrDelta": -0.4,
+    "noiseReductionDb": 1.4,
+    "wordCutPct": 1.7
+  },
+  {
+    "noise": "babble",
+    "snrDb": 0,
+    "mode": "balanced",
+    "siSdrDelta": -0.6,
+    "noiseReductionDb": 1.4,
+    "wordCutPct": 2
+  },
+  {
+    "noise": "babble",
+    "snrDb": 0,
+    "mode": "strong",
+    "siSdrDelta": -0.6,
+    "noiseReductionDb": 1.4,
+    "wordCutPct": 2
+  },
+  {
+    "noise": "babble",
+    "snrDb": 0,
+    "mode": "auto",
+    "siSdrDelta": -0.1,
+    "noiseReductionDb": 1.2,
+    "wordCutPct": 0
+  },
+  {
+    "noise": "babble",
+    "snrDb": 10,
+    "mode": "off",
+    "siSdrDelta": 0,
+    "noiseReductionDb": 0,
+    "wordCutPct": 0
+  },
+  {
+    "noise": "babble",
+    "snrDb": 10,
+    "mode": "natural",
+    "siSdrDelta": -1.2,
+    "noiseReductionDb": 1,
+    "wordCutPct": 0
+  },
+  {
+    "noise": "babble",
+    "snrDb": 10,
+    "mode": "light",
+    "siSdrDelta": -2,
+    "noiseReductionDb": 1.1,
+    "wordCutPct": 4.9
+  },
+  {
+    "noise": "babble",
+    "snrDb": 10,
+    "mode": "balanced",
+    "siSdrDelta": -2.6,
+    "noiseReductionDb": 1.1,
+    "wordCutPct": 6.1
+  },
+  {
+    "noise": "babble",
+    "snrDb": 10,
+    "mode": "strong",
+    "siSdrDelta": -2.6,
+    "noiseReductionDb": 1.1,
+    "wordCutPct": 6.1
+  },
+  {
+    "noise": "babble",
+    "snrDb": 10,
+    "mode": "auto",
+    "siSdrDelta": -1.4,
+    "noiseReductionDb": 1,
+    "wordCutPct": 0.3
+  },
+  {
+    "noise": "babble",
+    "snrDb": 20,
+    "mode": "off",
+    "siSdrDelta": 0,
+    "noiseReductionDb": 0.1,
+    "wordCutPct": 0
+  },
+  {
+    "noise": "babble",
+    "snrDb": 20,
+    "mode": "natural",
+    "siSdrDelta": -6.8,
+    "noiseReductionDb": 0.8,
+    "wordCutPct": 0
+  },
+  {
+    "noise": "babble",
+    "snrDb": 20,
+    "mode": "light",
+    "siSdrDelta": -8.7,
+    "noiseReductionDb": 0.9,
+    "wordCutPct": 10.5
+  },
+  {
+    "noise": "babble",
+    "snrDb": 20,
+    "mode": "balanced",
+    "siSdrDelta": -9.9,
+    "noiseReductionDb": 1,
+    "wordCutPct": 12.2
+  },
+  {
+    "noise": "babble",
+    "snrDb": 20,
+    "mode": "strong",
+    "siSdrDelta": -9.9,
+    "noiseReductionDb": 1,
+    "wordCutPct": 12.2
+  },
+  {
+    "noise": "babble",
+    "snrDb": 20,
+    "mode": "auto",
+    "siSdrDelta": -6.8,
+    "noiseReductionDb": 0.8,
+    "wordCutPct": 0
+  }
+]
